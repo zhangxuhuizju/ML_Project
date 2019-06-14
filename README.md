@@ -33,7 +33,7 @@ bash ./datasets/download_cyclegan_dataset.sh monet2photo
 - Train a model:
 ```bash
 #!./scripts/train_cyclegan.sh
-python train.py --dataroot ./datasets/monet2photo --name maps_cyclegan --model cycle_gan
+python train.py --dataroot ./datasets/monet2photo --name monet2photo_cyclegan --model cycle_gan
 ```
 To see more intermediate results, check out `./checkpoints/monet2photo_cyclegan/web/index.html`.
 - Test the model:
