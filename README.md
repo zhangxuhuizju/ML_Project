@@ -25,23 +25,23 @@ cd pytorch-CycleGAN-and-pix2pix
   - For Docker users, we provide the pre-built Docker image and Dockerfile. Please refer to our [Docker](docs/docker.md) page.
 
 ### CycleGAN train/test
-- Download a CycleGAN dataset (e.g. maps):
+- Download a CycleGAN dataset (e.g. monet2photo):
 ```bash
-bash ./datasets/download_cyclegan_dataset.sh maps
+bash ./datasets/download_cyclegan_dataset.sh monet2photo
 ```
 - To view training results and loss plots, run `python -m visdom.server` and click the URL http://localhost:8097.
 - Train a model:
 ```bash
 #!./scripts/train_cyclegan.sh
-python train.py --dataroot ./datasets/maps --name maps_cyclegan --model cycle_gan
+python train.py --dataroot ./datasets/monet2photo --name maps_cyclegan --model cycle_gan
 ```
-To see more intermediate results, check out `./checkpoints/maps_cyclegan/web/index.html`.
+To see more intermediate results, check out `./checkpoints/monet2photo_cyclegan/web/index.html`.
 - Test the model:
 ```bash
 #!./scripts/test_cyclegan.sh
-python test.py --dataroot ./datasets/maps --name maps_cyclegan --model cycle_gan
+python test.py --dataroot ./datasets/monet2photo --name monet2photo_cyclegan --model cycle_gan
 ```
-- The test results will be saved to a html file here: `./results/maps_cyclegan/latest_test/index.html`.
+- The test results will be saved to a html file here: `./results/monet2photo_cyclegan/latest_test/index.html`.
 
 
 ### Apply a pre-trained model (CycleGAN)
